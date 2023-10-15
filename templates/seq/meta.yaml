@@ -1,0 +1,86 @@
+name: Seq
+description: Seq is the intelligent search, analysis, and alerting server built specifically for modern structured log data. Its carefully-designed user interface, JSON event store, and familiar query language make it an efficient platform for detecting and diagnosing issues in complex applications and microservices. It has a strong focus on structured logging, the idea that log events should carry important information in first-class properties, and deep support for message templates, a human-friendly, machine-readable syntax for capturing and rendering structured log events.
+instructions: null
+changeLog:
+  - date: 2023-10-13
+    description: first release
+links:
+  - label: Github
+    url: https://github.com/datalust/seq-tickets
+  - label: Website
+    url: https://datalust.co/seq
+  - label: Documentation
+    url: https://docs.datalust.co
+contributors:
+  - name: andyzukunft
+    url: https://github.com/andyzukunft
+schema:
+  type: object
+  required:
+    - projectName
+    - appServiceName
+    - appServiceImage
+    - acceptEula
+    - adminUserName
+    - webPort
+    - ingestionPort
+    - maximumMemory
+  properties:
+    projectName:
+      type: string
+      title: Project Name
+    appServiceName:
+      type: string
+      title: App Service Name
+      default: seq
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: datalust/seq:latest
+    acceptEula:
+      type: boolean
+      title: Accept EULA
+      default: true
+    adminUserName:
+      type: string
+      title: Admin Username
+      default: admin
+    webPort:
+      type: string
+      title: API + HTTP Port
+      default: 80
+    ingestionPort:
+      type: string
+      title: Ingestion-only Port
+      default: 5341
+    maximumMemory:
+      type: string
+      title: Memory Limit (RAM)
+      default: 1024MB
+benefits:
+  - title: Local-First service
+    description: Seq is a log ingestion and analysis server that operates on a local-first basis. Meaning all your data is stored on your device, giving you full control over your information.
+  - title: Language and Framework integrations
+    description: Supports / integrates with most of the common languages and frameworks.
+  - title: Free of cost
+    description: 100% free and. This means you can use it without any cost.
+  - title: Shoot for the moon?
+    description: You want to take a shoot for the moon? Other users of Seq - NASA - already does!
+features:
+  - title: Store and Logs
+    description: Store logs on a central place. Integrates with common languages such as Java, .NET, Node.js, Python among others and their provided logging frameworks.
+  - title: Analyze
+    description: Analyze your logs for suspicious behaviour or take a deep dive to found root causes for errors in your applications.
+  - title: Alerting
+    description: Be alerted if special events are occuring or if regular events are not happening within a time frame.
+  - title: Custom Alert Output 
+  - title: Supports OpenTelemetry Format
+    description: Ingest data in OpenTelemetry format
+  - title: Supports Greylog Extended Log Format (GELF)
+    description: Ingest data in GELF
+tags:
+  - Logging
+  - Analysis
+  - Alerting
+  - DevOps
+  - Tools
